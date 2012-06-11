@@ -1,4 +1,4 @@
-# SlimBreadcrumb
+# SlimBreadcrumb [![Build Status](https://secure.travis-ci.org/fiedl/slim_breadcrumb.png?branch=master)](http://travis-ci.org/fiedl/slim_breadcrumb)
 
 This is a **ruby on rails gem** to **slim out** certain elements of a **breadcrumb navigation** and show these elements only if the user's mouse dwells on the breadcrumb separator.
 
