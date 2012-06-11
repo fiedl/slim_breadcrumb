@@ -18,9 +18,20 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "rails", ">= 3.2"
   gem.add_dependency "jquery-rails"
+  gem.add_dependency 'sass-rails'
+  gem.add_dependency 'coffee-rails'
 
   gem.add_development_dependency "rake"
+  gem.add_development_dependency "bundler"
   gem.add_development_dependency "rspec-rails", ">= 2.8.0"
+  gem.add_development_dependency "guard", "1.0.1"
   gem.add_development_dependency "nokogiri", ">= 1.5.0"
   gem.add_development_dependency "capybara"
+  gem.add_development_dependency 'rspec-rails', '2.10.0'
+  gem.add_development_dependency 'guard-rspec', '0.5.5'
+
+  gem.add_development_dependency 'execjs'
+  gem.add_development_dependency 'therubyracer'
+
 end
+

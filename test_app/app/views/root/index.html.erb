@@ -1,24 +1,25 @@
-<h1>slim_breadcrumb Test App</h1>
+<% title "slim_breadcrumb Test App" %>
 
 <nav>
   <div id="breadcrumb">
     <ul>
-      <li class="first crumb"><a href="#">#0 (Root)</a></li>
-      <li class="crumb sep">&nbsp;</li>
+      <!-- The id attributes are just for rspec testing an are not required using the gem. -->
+      <li id="crumb0" class="first crumb"><a href="#">#0 (Root)</a></li>
+      <li id="crumb_sep0" class="crumb sep">&nbsp;</li>
       
-      <li class="slim crumb"><a href="#">#1 (Slim Crumb)</a></li>
-      <li class="crumb sep">&nbsp;</li>
+      <li id="crumb1" class="slim crumb"><a href="#">#1 (Slim Crumb)</a></li>
+      <li id="crumb_sep1" class="crumb sep">&nbsp;</li>
 
-      <li class="slim crumb"><a href="#">#2 (Slim Crumb)</a></li>
-      <li class="crumb sep">&nbsp;</li>
+      <li id="crumb2" class="slim crumb"><a href="#">#2 (Slim Crumb)</a></li>
+      <li id="crumb_sep2" class="crumb sep">&nbsp;</li>
       
-      <li class="crumb"><a href="#">#3 (Normal Crumb)</a></li>
-      <li class="crumb sep">&nbsp;</li>
+      <li id="crumb3" class="crumb"><a href="#">#3 (Normal Crumb)</a></li>
+      <li id="crumb_sep3" class="crumb sep">&nbsp;</li>
 
-      <li class="slim crumb"><a href="#">#4 (Slim Crumb)</a></li>
-      <li class="crumb sep">&nbsp;</li>
+      <li id="crumb4" class="slim crumb"><a href="#">#4 (Slim Crumb)</a></li>
+      <li id="crumb_sep4" class="crumb sep">&nbsp;</li>
 
-      <li class="slim last crumb"><a href="#">#5 (Slim Crumb)</a></li>
+      <li id="crumb5" class="slim last crumb"><a href="#">#5 (Slim Crumb)</a></li>
 
     </ul>
   </div>
