@@ -1,10 +1,10 @@
 # SlimBreadcrumb
 
-This is a **ruby on rails gem** to slim out certain elements of a breadcrumb navigation and show these elements only if the user's mouse dwells on the breadcrumb separator.
+This is a **ruby on rails gem** to **slim out** certain elements of a **breadcrumb navigation** and show these elements only if the user's mouse dwells on the breadcrumb separator.
 
 ## Demo
 
-You might want to have a look at this demo app at heroku.
+You might want to have a look at [this demo app at heroku](http://slim-breadcrumb-test-app.herokuapp.com/).
 
 The [code of this demo app can be found here](https://github.com/fiedl/slim_breadcrumb/tree/master/test_app).
 
@@ -60,10 +60,9 @@ In order to use this gem, you may use any tool of convenience to create your bre
 
 The important parts of this example are the **css classes** and the **id `#breadcrumb`**, the script relies on.
 
-If you'd like to have a look at the script, which is rather simple, you can do this here:
-https://github.com/fiedl/slim_breadcrumb/blob/master/lib/assets/javascripts/slim_breadcrumb.js.coffee
+If you'd like to have a look at the [script, which is rather simple, you can do this here](https://github.com/fiedl/slim_breadcrumb/blob/master/lib/assets/javascripts/slim_breadcrumb.js.coffee).
 
-You also have to handle your **stylesheets** for the breadcrumb yourself. An [example stylesheet can be found here](https://github.com/fiedl/slim_breadcrumb/blob/master/test_app/app/assets/stylesheets/breadcrumb.css.sass). Note that you may use the breadcrumb separator image just as done in the example, since this gem provides this image.
+You also have to handle your **stylesheets** for the breadcrumb yourself. An [example stylesheet can be found here](https://github.com/fiedl/slim_breadcrumb/blob/master/test_app/app/assets/stylesheets/breadcrumb.css.sass). Note that you may use the breadcrumb separator image just as done in the example, since this gem is providing this image.
 
 ## Contributing
 
