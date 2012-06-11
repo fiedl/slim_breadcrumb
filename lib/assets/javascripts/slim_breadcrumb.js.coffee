@@ -45,9 +45,10 @@ jQuery ->
 
   # hide animation:
   hide_slim_breadcrumbs = () ->
-    $( "li.crumb" ).hide( "fade", "fast", ->
-      $( "li.crumb:not(.slim)" ).show( "fade" )
-    )
+    if $( "li.slim.crumb:visible" ).html()
+      $( "li.crumb" ).hide( "fade", "fast", ->
+        $( "li.crumb:not(.slim)" ).show( "fade" )
+      )
 
   # helper function to find nearby slim elements
   close_slim_elements = ( next_to_element ) ->
