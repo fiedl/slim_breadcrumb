@@ -49,4 +49,4 @@ end
 
 gem "mocha", :group => :test
 
-gem "slim_breadcrumb", path: "../"
+gem "slim_breadcrumb"
