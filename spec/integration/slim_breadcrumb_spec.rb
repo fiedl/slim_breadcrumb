@@ -21,6 +21,8 @@ describe "slim_breadcrumb behaviour", js: true do
     end
 
     it "should *not* appear after hovering the separator #3" do
+      find( "#breadcrumb" ).trigger( :mouseout )   # 
+      sleep 2.0                                    #  these two lines are a quick fix for travis
       find( "#crumb_sep3" ).trigger( :mouseover )
       sleep 1.2
       page.should_not have_selector( "#crumb1", visible: true )
