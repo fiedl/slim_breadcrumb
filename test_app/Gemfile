@@ -50,4 +50,5 @@ end
 gem "mocha", :group => :test
 
 # gem "slim_breadcrumb"
-gem "slim_breadcrumb", path: "../"
+#gem "slim_breadcrumb", path: "../"
+gem "slim_breadcrumb", git: "https://github.com/fiedl/slim_breadcrumb.git"
