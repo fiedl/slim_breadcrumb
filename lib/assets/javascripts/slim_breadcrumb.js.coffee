@@ -13,6 +13,9 @@ jQuery ->
   breadcrumb_slim_in_timer = 0
   breadcrumb_slim_out_timer = 0
 
+  # status variable that knows whether an animation is currently running.
+  animating = false
+
   # Time required to dwell.
   time_to_dwell = 1000 # milliseconds
 
@@ -24,6 +27,22 @@ jQuery ->
     , time_to_dwell )
   ).mouseout( ->
     clearTimeout( breadcrumb_slim_in_timer )
+  )
+
+  # Show the slim element on click as well.
+  $( "li.crumb.sep" ).click( ->
+    if not animating
+      show_slim_breadcrumbs( $( this ) )
+  )
+
+  # Show all elements on dblclick.
+  $( "#breadcrumb" ).dblclick( ->
+    delay_time = 0
+    delay_time = 600 if animating # because then, a click event is performing an animation
+    animating = true
+    $( "li.slim.crumb:not(:visible)" ).delay( delay_time ).show( "drop", ->
+      animating = false
+    )
   )
 
   # If the mouse leaves the breadcrumb, hide the slim elements.
@@ -41,13 +60,19 @@ jQuery ->
     elements_to_show = close_slim_elements( next_to_element )
     for elem in elements_to_show
       unless $( elem ).is( ":visible" )
-        $( elem ).show( breadcrumb_slim_effect )
+        animating = true
+        $( elem ).show( breadcrumb_slim_effect, ->
+          animating = false
+        )
 
   # hide animation:
   hide_slim_breadcrumbs = () ->
     if $( "li.slim.crumb:visible" ).html()
+      animating = true
       $( "li.crumb" ).hide( "fade", "fast", ->
-        $( "li.crumb:not(.slim)" ).show( "fade" )
+        $( "li.crumb:not(.slim)" ).show( "fade", ->
+          animating = false
+        )
       )
 
   # helper function to find nearby slim elements

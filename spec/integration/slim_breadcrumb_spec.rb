@@ -33,6 +33,24 @@ describe "slim_breadcrumb behaviour", js: true do
       page.should_not have_selector( "#crumb1", visible: true )
     end
 
+    it "should appear after clicking on the separator #1 and disappear after mouseout" do
+      find( "#crumb_sep1" ).trigger( :click )
+      sleep 1.2
+      page.should have_selector( "#crumb1", visible: true )
+      find( "#breadcrumb" ).trigger( :mouseout )
+      sleep 1.2
+      page.should_not have_selector( "#crumb1", visible: true )
+    end
+
+    it "should appear after dblclick on separator #4, since all elements are shown after dblclick" do
+      find( "#crumb_sep4" ).trigger( :dblclick )
+      sleep 2.0
+      page.should have_selector( "#crumb1", visible: true )
+      find( "#breadcrumb" ).trigger( :mouseout )
+      sleep 1.2
+      page.should_not have_selector( "#crumb1", visible: true )
+    end
+
   end
 
   describe "root element" do

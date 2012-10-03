@@ -4,6 +4,8 @@
 
 This is a **ruby on rails gem** to **slim out** certain elements of a **breadcrumb navigation** and show these elements only if the user's mouse dwells on the breadcrumb separator.
 
+Clicking on a separator also shows the hidden elements near the mouse. Doubleclick anywhere in the breadcrumb area will show all hidden breadcrumb elements.
+
 ## Demo
 
 You might want to have a look at [this demo app at heroku](http://slim-breadcrumb-test-app.herokuapp.com/).
