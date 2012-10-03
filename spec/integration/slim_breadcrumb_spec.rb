@@ -47,7 +47,7 @@ describe "slim_breadcrumb behaviour", js: true do
       sleep 2.0
       page.should have_selector( "#crumb1", visible: true )
       find( "#breadcrumb" ).trigger( :mouseout )
-      sleep 1.2
+      sleep 2.0
       page.should_not have_selector( "#crumb1", visible: true )
     end
 
