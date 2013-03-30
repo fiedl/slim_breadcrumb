@@ -7,8 +7,9 @@ group :test, :development do
   gem 'rspec-mocks'
   gem 'nokogiri'
 
-  gem 'capybara'
-  gem "capybara-webkit"
+  gem 'capybara' ,'>=2.0.2'
+  gem 'poltergeist'
+  gem 'launchy' # for save_and_open_page
 
   gem 'execjs'
   gem 'therubyracer', :platform => :ruby
@@ -26,6 +27,7 @@ end
 gem 'jquery-rails'
 gem 'coffee-rails'
 gem 'sqlite3'
+gem 'turbolinks'
 
 
 # Specify your gem's dependencies in slim_breadcrumb.gemspec

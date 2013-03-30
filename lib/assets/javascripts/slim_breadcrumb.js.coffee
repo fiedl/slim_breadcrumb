@@ -1,5 +1,5 @@
 
-jQuery ->
+ready = ->
 
   # The last element of the whole bread crumb path is not to be shown slim
   # in order to not have an open end (like " A >> C > D > " if E is slim).
@@ -82,3 +82,7 @@ jQuery ->
     right_element = $( next_to_element ).nextAll( "li.crumb:not(.slim,.sep)" ).first()
     elements_between = left_element.nextUntil( right_element, "li.slim.crumb" )
     return elements_between
+
+$(document).ready(ready)
+$(document).on('page:load', ready)
+

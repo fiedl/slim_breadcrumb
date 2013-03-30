@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= reuqire turbolinks
 //= require slim_breadcrumb
 //= require_tree .
