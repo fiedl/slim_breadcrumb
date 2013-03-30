@@ -1,6 +1,7 @@
 TestApp::Application.routes.draw do
 
   get "root/index"
+  get "root/site_without_breadcrumbs"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

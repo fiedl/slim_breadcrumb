@@ -47,8 +47,11 @@ end
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+# Turbolinks: https://github.com/rails/turbolinks/
+gem 'turbolinks'
+
 gem "mocha", :group => :test
 
 # gem "slim_breadcrumb"
-#gem "slim_breadcrumb", path: "../"
-gem "slim_breadcrumb", git: "https://github.com/fiedl/slim_breadcrumb.git"
+gem "slim_breadcrumb", path: "../"
+#gem "slim_breadcrumb", git: "https://github.com/fiedl/slim_breadcrumb.git"

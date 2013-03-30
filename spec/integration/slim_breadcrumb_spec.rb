@@ -67,3 +67,14 @@ describe "slim_breadcrumb behaviour", js: true do
 
 end
 
+describe "turbolinks support", js: true do
+
+  specify "visiting a site without breadcrumb and then loading a site with breadcrumbs via turbolinks" do
+    visit root_site_without_breadcrumbs_path
+    click_on "this link, which redirects to the start page with turbolinks"
+    page.should have_selector( "#crumb1", visible: true )
+    #page.should_not have_selector( "#crumb1", visible: true )
+  end
+
+end
+
